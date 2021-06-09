@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     }, tempView: {
         justifyContent: 'center',
         alignItems: 'center',
-        width: '50%'
+        width: '50%',
     }
 });
 

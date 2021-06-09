@@ -4,7 +4,8 @@ import {
     SafeAreaView,
     StatusBar,
     Text,
-    View
+    View,
+    Image
 } from 'react-native';
 import styles from "./WeatherDetailStyle";
 import MapView, { Marker } from 'react-native-maps';
@@ -21,6 +22,7 @@ export default class WeatherDetail extends Component {
             max: '',
             min: '',
             temp: '',
+            icon: '',
             latitude: '0000',
             longitude: '0000'
         };
@@ -35,10 +37,11 @@ export default class WeatherDetail extends Component {
             speed: this.props.navigation.getParam('speed', ''),
             max: this.props.navigation.getParam('max', ''),
             min: this.props.navigation.getParam('min', ''),
+            icon: this.props.navigation.getParam('icon', ''),
         })
     }
     render() {
-        const { detail, weather, humidity, speed, max, min, latitude, longitude, temp } = this.state
+        const { detail, weather, humidity, speed, max, min, latitude, longitude, temp, icon } = this.state
         return (
             <SafeAreaView>
                 {/* Statusbar */}
@@ -83,6 +86,7 @@ export default class WeatherDetail extends Component {
                         <View style={styles.tempView}>
                             {/* Temprature */}
                             <Text style={styles.weatherTemp}>{((temp - 32) * 5 / 9).toFixed(2) + "° c"}</Text>
+                            <Image style={{ width: 100, height: 100 }} source={{ uri: Constants.IMAGE_PATH + icon + '@2x.png' }} />
                         </View>
                     </View>
                 </View>

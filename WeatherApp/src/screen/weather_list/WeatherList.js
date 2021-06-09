@@ -54,6 +54,7 @@ export default class WeatherList extends Component {
                 speed: item.wind.speed,
                 max: item.main.temp_max,
                 min: item.main.temp_min,
+                icon: item.weather[0].icon
             })
     }
 
@@ -69,6 +70,7 @@ export default class WeatherList extends Component {
                 </View>
                 <View style={styles.weatherItemColumn2}>
                     {/* Weather Temparatur */}
+                    {/* Temperaature calculation (84°F − 32) × 5/9 = 28.889°C */}
                     <Text style={styles.weatherTemp}>{((item.main.temp - 32) * 5 / 9).toFixed(2) + "°"}<Text style={styles.weatherTemp1}>{' C'}</Text></Text>
                 </View>
             </View>
