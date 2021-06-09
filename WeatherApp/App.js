@@ -1,7 +1,8 @@
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 
-//  import MainNavigation from './src/main/MainNavigation.js';
+import Constant from './src/common/Constants.js';
+
 import Splash from './src/screen/splash/Splash.js';
 import WeatherList from './src/screen/weather_list/WeatherList.js';
 
@@ -13,10 +14,10 @@ const MainNavigation = createStackNavigator({
       headerTitleStyle: {
         color: 'white',
         textAlign: 'center',
-        fontFamily:'Roboto-Regular',
+        fontFamily: 'Roboto-Regular',
       },
       headerStyle: {
-        backgroundColor: '#00804A',
+        backgroundColor: Constant.COLOR.GREEN,
       }
     }
   },

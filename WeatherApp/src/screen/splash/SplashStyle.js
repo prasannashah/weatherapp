@@ -1,16 +1,16 @@
 import { Dimensions, StyleSheet } from 'react-native';
-
+import Constant from '../../common/Constants.js';
 const styles = StyleSheet.create({
     mainContainer: {
         height: Dimensions.get('window').height,
         backgroundColor: 'white',
         justifyContent: 'center',
-        alignItems:'center'
+        alignItems: 'center'
     },
     splashTitle: {
-        color:'#00804A',
-        fontSize:40,
-        fontFamily:'Roboto-Medium'
+        color: Constant.COLOR.GREEN,
+        fontSize: 40,
+        fontFamily: 'Roboto-Medium'
     },
 });
 
